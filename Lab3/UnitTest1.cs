@@ -1,5 +1,10 @@
 using Xunit;
-using CompareVal;
+using Myclass;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace TestProject1
 {
@@ -8,25 +13,7 @@ namespace TestProject1
         [Fact]
         public void Test1()
         {
-            int a = 0;
-            int b = 0;
-            Assert.Equal(0, Compare.minv(a, b));
-        }
-
-        [Fact]
-        public void Test2()
-        {
-            int a = 1;
-            int b = 2;
-            Assert.Equal(1, Compare.minv(a, b));
-        }
-
-        [Fact]
-        public void Test3()
-        {
-            int a = 101;
-            int b = 94;
-            Assert.Equal(94, Compare.minv(a, b));
+            Assert.Equal(Class1.func(0, 0), Math.Cos(1));
         }
     }
 }
