@@ -1,9 +1,33 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Myclass;
+using DataServices;
 
-double k, z;
-Console.WriteLine("Enter k");
-k = Convert.ToDouble(Console.ReadLine());
-Console.WriteLine("Enter z");
-z = Convert.ToDouble(Console.ReadLine());
-Class1.func(k, z);
+Console.WriteLine("Enter date");
+string date;
+date = Console.ReadLine();
+switch(DataService.GetDay(date))
+{
+    case 1:
+        Console.WriteLine("Monday");
+        break;
+    case 2:
+        Console.WriteLine("Tuesday");
+        break;
+    case 3:
+        Console.WriteLine("Wednsday");
+        break;
+    case 4:
+        Console.WriteLine("Thursday");
+        break;
+    case 5:
+        Console.WriteLine("Friday");
+        break;
+    case 6:
+        Console.WriteLine("Saturday");
+        break;
+    case 7:
+        Console.WriteLine("Sunday");
+        break;
+    default:
+        Console.WriteLine(DataService.GetDay(date));
+        break;
+}

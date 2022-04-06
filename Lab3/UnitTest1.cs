@@ -1,10 +1,5 @@
 using Xunit;
-using Myclass;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DataServices;
 
 namespace TestProject1
 {
@@ -13,7 +8,13 @@ namespace TestProject1
         [Fact]
         public void Test1()
         {
-            Assert.Equal(Class1.func(0, 0), Math.Cos(1));
+            Assert.Equal((DataService.GetDay("05.04.2022")), (int)2);
+        }
+
+        [Fact]
+        public void Test2()
+        {
+            Assert.Equal((DataService.GetDay("01.01.2020")), (int)3);
         }
     }
 }
